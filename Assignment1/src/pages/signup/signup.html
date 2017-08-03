@@ -1,0 +1,44 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="background">
+<ion-card>
+	<ion-card-header>
+	Signup Form
+	</ion-card-header>
+	<ion-card-content>
+	<ion-list no-lines>
+	<ion-item>
+	<ion-input type= "text" placeholder="username"></ion-input>
+</ion-item>
+<ion-item>
+	<ion-input type= "email" placeholder="Email"></ion-input>
+</ion-item>
+
+<ion-item>
+	<ion-input type= "text" placeholder="password"></ion-input>
+</ion-item>
+
+<ion-item>
+	<ion-input type= "number" placeholder="Phone"></ion-input>
+</ion-item>
+
+<ion-item>
+	<ion-input type= "text" placeholder="Address"></ion-input>
+</ion-item>
+
+</ion-list>
+<button ion-button block (click)="signin()">Signup</button>
+<!-- <p>OR</p>
+<button ion-button block outline color="facebook">
+<ion-icon name>
+</button> -->
+</ion-card-content>
+
+</ion-card>
+<button ion-button clear full color="light" (click)="signin()">have an account? Sign In</button>
+
+</ion-content>

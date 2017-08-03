@@ -1,0 +1,58 @@
+<!--
+  Generated template for the DetailFirstPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>detailFirst</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+<!--
+<ion-card>
+  <ion-card-header>
+    Header
+  </ion-card-header>
+  <ion-card-content>
+    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+  </ion-card-content>
+</ion-card>
+ -->
+ <ion-card  (click)="move()">
+   <!-- Image Source -->
+   <!-- https://www.escati.com/wp-content/uploads/2015/12/melbourne-australia.jpg -->
+    <img src="assets/melbourne-australia.jpg"/>
+    <div class="card-title">Melbourne</div>
+    <div class="card-subtitle">72 Listings</div>
+  </ion-card>
+
+  <ion-card (click)="move()">
+    <!-- Image Source -->
+    <!-- https://media-cdn.tripadvisor.com/media/photo-s/02/26/68/dd/sydney-opera-house.jpg -->
+    <img src="assets/sydney-australia.jpg"/>
+    <div class="card-title">Sydney</div>
+    <div class="card-subtitle">28 Listings</div>
+  </ion-card>
+
+  <ion-card (click)="move()">
+
+    <!-- Image Source -->
+    <!-- http://www.australia.com/content/australia/fr_fr/places/perth/_jcr_content/hero/image.adapt.1663.medium.jpg -->
+    <img src="assets/perth-australia.jpg"/>
+    <div class="card-title">Perth</div>
+    <div class="card-subtitle">28 Listings</div>
+  </ion-card>
+
+
+<!-- </ion-content> -->
+</ion-content>
