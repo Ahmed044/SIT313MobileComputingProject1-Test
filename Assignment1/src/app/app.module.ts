@@ -13,6 +13,8 @@ import { FavouritePage } from '../pages/favourite/favourite';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StorageProvider } from '../providers/storage/storage';
+import { NetworkProvider } from '../providers/network/network';
+import { SecurityProvider } from '../providers/security/security';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { StorageProvider } from '../providers/storage/storage';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    StorageProvider
+    StorageProvider,
+    NetworkProvider,
+    SecurityProvider
   ]
 })
 export class AppModule {}
