@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { HomePage } from '../home/home';
-import { DetailFirstPage } from '../detail-first/detail-first';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -19,17 +19,18 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  //Page life cycle method
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-  signup(){
+
+  //Custom Navigation Methods
+  navigateToSignUp(){
   	this.navCtrl.push(SignupPage);
-
   }
-  goToHome(){
 
-  	this.navCtrl.setRoot(DetailFirstPage);
-
+  navigateToHome(){
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

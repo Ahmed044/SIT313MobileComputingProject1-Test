@@ -6,27 +6,27 @@
 -->
 
 <ion-content class="background">
-<ion-card>
-	<ion-card-header>
-	Login Form
-	</ion-card-header>
-	<ion-card-content>
-	<ion-list no-lines>
-	<ion-item>
-	<ion-input type= "text" placeholder="username"></ion-input>
-</ion-item>
-<ion-item>
-	<ion-input type= "text" placeholder="password"></ion-input>
-</ion-item>
-</ion-list>
-<button ion-button block (click)="goToHome()">Login</button>
-<!-- <p>OR</p>
-<button ion-button block outline color="facebook">
-<ion-icon name>
-</button> -->
-</ion-card-content>
+	<ion-card>
+		<ion-card-header>
+			Login Form
+		</ion-card-header>
+		
+		<ion-card-content>
+			<ion-list no-lines>
+				<ion-item>
+					<ion-input type= "text" placeholder="username"></ion-input>
+				</ion-item>
+				
+				<ion-item>
+					<ion-input type= "text" placeholder="password"></ion-input>
+				</ion-item>
+			</ion-list>
+		
+			<button ion-button block (click)="navigateToHome()">Login</button>
+		</ion-card-content>
 
-</ion-card>
-<button ion-button clear full color="light" (click)="signup()">Don't have an account? Signup</button>
+	</ion-card>
+	
+	<button ion-button clear full color="light" (click)="navigateToSignUp()">Don't have an account? Signup</button>
 
 </ion-content>

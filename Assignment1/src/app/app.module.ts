@@ -8,7 +8,6 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { PropDetailsPage } from '../pages/prop-details/prop-details';
-import { DetailFirstPage } from '../pages/detail-first/detail-first';
 import { FavouritePage } from '../pages/favourite/favourite';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,7 +20,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SignupPage,
     HomePage,
     PropDetailsPage,
-    DetailFirstPage,
     FavouritePage,
     ListPage
   ],
@@ -36,7 +34,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SignupPage,
     HomePage,
     PropDetailsPage,
-    DetailFirstPage,
     FavouritePage,
     ListPage
   ],

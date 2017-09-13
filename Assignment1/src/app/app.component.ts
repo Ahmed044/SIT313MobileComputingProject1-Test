@@ -6,7 +6,6 @@ import { FavouritePage } from '../pages/favourite/favourite';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
-import { DetailFirstPage } from '../pages/detail-first/detail-first';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +22,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: DetailFirstPage },
+      { title: 'Home', component: HomePage },
       { title: 'Favourites', component: FavouritePage },
       { title: 'Logout', component: LoginPage }
     ];

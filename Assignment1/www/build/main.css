@@ -25199,16 +25199,16 @@ ion-navbar.toolbar {
   }
 }
 
-page-detail-first .background {
+page-homePage .background {
   background-image: url("../assets/bg.jpg");
 }
 
-page-detail-first .card-background-page ion-card {
+page-homePage .card-background-page ion-card {
   position: relative;
   text-align: center;
 }
 
-page-detail-first .card-background-page .card-title {
+page-homePage .card-background-page .card-title {
   position: absolute;
   top: 36%;
   font-size: 2.0em;
@@ -25217,7 +25217,7 @@ page-detail-first .card-background-page .card-title {
   color: #fff;
 }
 
-page-detail-first .card-background-page .card-subtitle {
+page-homePage .card-background-page .card-subtitle {
   font-size: 1.0em;
   position: absolute;
   top: 52%;
