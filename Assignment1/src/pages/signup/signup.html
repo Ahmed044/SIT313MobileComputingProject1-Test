@@ -12,22 +12,22 @@
 	<ion-card-content>
 	<ion-list no-lines>
 	<ion-item>
-	<ion-input type= "text" placeholder="username"></ion-input>
+	<ion-input required type= "text" placeholder="username" [(ngModel)]="input.username"></ion-input>
 </ion-item>
 <ion-item>
-	<ion-input type= "email" placeholder="Email"></ion-input>
-</ion-item>
-
-<ion-item>
-	<ion-input type= "text" placeholder="password"></ion-input>
+	<ion-input required type= "email" placeholder="Email" [(ngModel)]="input.email"></ion-input>
 </ion-item>
 
 <ion-item>
-	<ion-input type= "number" placeholder="Phone"></ion-input>
+	<ion-input required type= "text" placeholder="password" [(ngModel)]="input.password"></ion-input>
 </ion-item>
 
 <ion-item>
-	<ion-input type= "text" placeholder="Address"></ion-input>
+	<ion-input type= "number" placeholder="Phone" [(ngModel)]="input.phone"></ion-input>
+</ion-item>
+
+<ion-item>
+	<ion-input type= "text" placeholder="Address" [(ngModel)]="input.address"></ion-input>
 </ion-item>
 
 </ion-list>

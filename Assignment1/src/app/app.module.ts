@@ -2,7 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
+//networking
+import { HttpModule } from '@angular/http';
+
 import { MyApp } from './app.component';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
+//Custom pages
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
@@ -10,8 +17,10 @@ import { SignupPage } from '../pages/signup/signup';
 import { PropDetailsPage } from '../pages/prop-details/prop-details';
 import { FavouritePage } from '../pages/favourite/favourite';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+//local storage
+import { IonicStorageModule } from '@ionic/storage';
+
+//custom providers
 import { StorageProvider } from '../providers/storage/storage';
 import { NetworkProvider } from '../providers/network/network';
 import { SecurityProvider } from '../providers/security/security';
@@ -28,7 +37,9 @@ import { SecurityProvider } from '../providers/security/security';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,10 +54,10 @@ import { SecurityProvider } from '../providers/security/security';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     StorageProvider,
     NetworkProvider,
-    SecurityProvider
+    SecurityProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

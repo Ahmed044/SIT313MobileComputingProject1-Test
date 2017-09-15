@@ -14,15 +14,15 @@
 		<ion-card-content>
 			<ion-list no-lines>
 				<ion-item>
-					<ion-input type= "text" placeholder="username"></ion-input>
+					<ion-input type= "text" placeholder="username" [(ngModel)]="input.username"></ion-input>
 				</ion-item>
 				
 				<ion-item>
-					<ion-input type= "text" placeholder="password"></ion-input>
+					<ion-input type="password" placeholder="password" [(ngModel)]="input.password"></ion-input>
 				</ion-item>
 			</ion-list>
 		
-			<button ion-button block (click)="navigateToHome()">Login</button>
+			<button ion-button block (click)="login()">Login</button>
 		</ion-card-content>
 
 	</ion-card>
