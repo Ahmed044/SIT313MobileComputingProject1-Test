@@ -4,6 +4,8 @@ import 'rxjs/add/operator/map';
 
 //storage service
 import { StorageProvider } from '../storage/storage';
+//securoty provider to encrypt password
+import { SecurityProvider } from '../security/security';
 
 //user model
 import { User } from '../../Model/User.model';
@@ -22,7 +24,7 @@ export class NetworkProvider {
   user_prefix = 'user-'
   forums_list_id = 'forumlist'
 
-  constructor(public http: Http, public storageProvider : StorageProvider) {
+  constructor(public http: Http, public storageProvider : StorageProvider, public securityProvider : SecurityProvider) {
     console.log('Hello NetworkProvider Provider');
   }
 
@@ -61,7 +63,10 @@ export class NetworkProvider {
 
   //user signup
   callUserSignupApi(input){
-    
+
+    //Encrypt user password befor api call
+    input.password = this.securityProvider.gethasString(input.password)
+
         return new Promise( (resolve, reject) => {
           // We're using Angular HTTP provider to request the data,
           // then on the response, it'll map the JSON data to a parsed JS object.
@@ -80,7 +85,7 @@ export class NetworkProvider {
                   
                   console.log('signup success');
                   this.storageProvider.saveUser(new User(input))
-      
+                  resolve('ok')
                 }else{
                   reject('signup failed, user not found');
                 }
