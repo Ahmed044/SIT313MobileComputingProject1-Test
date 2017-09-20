@@ -35,6 +35,16 @@ export class MyApp {
       { title: 'Logout', component: LoginPage }
     ];
 
+    this.storageProvider.getCurrentUser().then((val)=>{
+
+      if (val){
+        this.rootPage = HomePage
+      }else{
+        this.rootPage = LoginPage
+      }
+
+    })
+
   }
 
   initializeApp() {

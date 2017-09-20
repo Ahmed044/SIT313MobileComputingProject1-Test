@@ -16,7 +16,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { PropDetailsPage } from '../pages/prop-details/prop-details';
 import { FavouritePage } from '../pages/favourite/favourite';
-
+import { forumslist } from '../pages/forumslist/forumslist';
 //local storage
 import { IonicStorageModule } from '@ionic/storage';
 
@@ -33,7 +33,8 @@ import { SecurityProvider } from '../providers/security/security';
     HomePage,
     PropDetailsPage,
     FavouritePage,
-    ListPage
+    ListPage,
+    forumslist
   ],
   imports: [
     BrowserModule,
@@ -49,7 +50,8 @@ import { SecurityProvider } from '../providers/security/security';
     HomePage,
     PropDetailsPage,
     FavouritePage,
-    ListPage
+    ListPage,
+    forumslist
   ],
   providers: [
     StatusBar,

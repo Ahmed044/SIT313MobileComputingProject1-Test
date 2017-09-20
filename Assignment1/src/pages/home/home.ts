@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { forumslist } from '../forumslist/forumslist'
+
 /**
  * Generated class for the DetailFirstPage page.
  *
@@ -22,8 +24,10 @@ export class HomePage {
     console.log('ionViewDidLoad DetailFirstPage');
   }
 
-  //Custom Navigation Method
-  navigateToHomePage(){
-    this.navCtrl.push(HomePage);
+  move(){
+
+    this.navCtrl.push(forumslist);
+
   }
+
 }

@@ -37,13 +37,19 @@ export class SignupPage {
   }
 
   //login custom method
-  login(){
+  signup(){
     
         if (this.input.username.length < 1){
           this.presentAlert('oops', 'username is empty')
           return
         }else if (this.input.username.length > 0 && this.input.username.length < 6){
           this.presentAlert('oops', 'username should not be less than 6 characters.')
+          return
+        }else if (this.input.email.length < 1){
+          this.presentAlert('oops', 'email is empty')
+          return
+        }else if (this.input.email.length < 6){
+          this.presentAlert('oops', 'email is less than 6 characters')
           return
         }else if (this.input.password.length < 1){
           this.presentAlert('oops', 'password is empty')
@@ -57,7 +63,7 @@ export class SignupPage {
           content: 'Please wait...'
         });
         loading.present()
-        this.networkProvider.callUserLoginApi(this.input).then(
+        this.networkProvider.callUserSignupApi(this.input).then(
           data => {
     
             loading.dismiss();
